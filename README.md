@@ -24,7 +24,7 @@ Esta es una aplicación pequeña diseñada para realizar **pruebas de aprendizaj
 2. **Navega al directorio del proyecto:**
 
     ```bash
-    cd tu_repositorio
+    cd permisos_app
     ```
 
 3. **Instala las dependencias de Flutter:**
