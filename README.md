@@ -18,7 +18,7 @@ Esta es una aplicación pequeña diseñada para realizar **pruebas de aprendizaj
 1. **Clona el repositorio:**
 
     ```bash
-    git clone [https://github.com/tu_usuario/tu_repositorio.git](https://github.com/tu_usuario/tu_repositorio.git)
+    git clone [https://github.com/Mackneto66/permisos_app.git](https://github.com/Mackneto66/permisos_app.git)
     ```
 
 2. **Navega al directorio del proyecto:**
@@ -76,4 +76,4 @@ Esta aplicación está bajo la licencia [**MIT License**](LICENSE).
 
 ## 📩 Contacto
 
-Si tienes dudas o sugerencias, puedes contactarme en [tu email o perfil de GitHub].
+Si tienes dudas, sugerencias o quieres colaborar, puedes contactarme a través de mi perfil de GitHub: [@Mackneto66](https://github.com/Mackneto66).
