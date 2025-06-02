@@ -1,9 +1,6 @@
+import 'package:permisos_app/core/core.dart';
 import 'package:permission_handler/permission_handler.dart';
 
-enum DialogEvent {
-  none,
-  showPermanentlyDeniedDialog,
-}
 
 class PermissionState {
   final PermissionStatus camera;

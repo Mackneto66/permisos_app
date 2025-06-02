@@ -1,0 +1,4 @@
+enum DialogEvent {
+  none,
+  showPermanentlyDeniedDialog,
+}

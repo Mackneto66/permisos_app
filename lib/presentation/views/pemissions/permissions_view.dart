@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:permisos_app/core/core.dart';
 import 'package:permisos_app/presentation/screens/providers/provider.dart';
 import 'package:permisos_app/presentation/widgets/widget.dart';
 
