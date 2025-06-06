@@ -9,7 +9,6 @@ class PermissionsView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final appState = ref.watch(appStateProvider);
     final permissions = ref.watch(permissionsProvider);
     final permissionsNotifier = ref.read(permissionsProvider.notifier);
 
