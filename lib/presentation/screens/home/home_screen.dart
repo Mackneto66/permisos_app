@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:permisos_app/presentation/widgets/widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,15 +6,17 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBarCustomWidget(title: Text('Home')), 
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16),
-            child: const MainMenuWidget(),
-          ),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        body: CustomScrollView(
+          slivers: [
+            SliverAppBarCustomWidget(title: Text('Home')), 
+            SliverPadding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16),
+              sliver: const MainMenuWidget(),
+            ),
+          ],
+        ),
       ),
     );
   }

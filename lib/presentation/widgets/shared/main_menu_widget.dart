@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:permisos_app/core/core.dart';
+import 'package:permisos_app/presentation/widgets/widget.dart';
+/* import 'package:permisos_app/core/core.dart';
+import 'package:permisos_app/presentation/widgets/widget.dart'; */
 
 class MainMenuWidget extends StatelessWidget {
   const MainMenuWidget({super.key});
@@ -9,32 +13,11 @@ class MainMenuWidget extends StatelessWidget {
       crossAxisCount: 3,
       crossAxisSpacing: 10,
       mainAxisSpacing: 10,
-      children: [
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.amber,
-        ),
-        Container(
-          color: Colors.lightGreen,
-        ),
-        Container(
-          color: Colors.black54,
-        ),
-        Container(
-          color: Colors.pink,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.lime,
-        ),
-        Container(
-          color: Colors.tealAccent,
-        ),
-      ],
+      children: menuItems.map((item) => MenuItemWidget(
+        item: item, 
+        title: item.title, 
+        route: item.route, 
+        icon: item.icon,)).toList(),
     );
   }
 }
