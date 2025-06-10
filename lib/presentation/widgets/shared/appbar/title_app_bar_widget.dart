@@ -22,7 +22,7 @@ class TitleAppBarWidget extends StatelessWidget {
       },
       child: Text(title,
           style: const TextStyle(
-              color: Colors.white, fontSize: 32, fontWeight: FontWeight.bold, fontFamily: 'RobotoMono')),
+              color: Colors.white, fontSize: 32, fontWeight: FontWeight.bold, fontFamily: 'RobotoMono',)),
     );
   }
 }

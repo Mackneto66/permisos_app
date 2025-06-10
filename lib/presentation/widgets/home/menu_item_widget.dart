@@ -8,7 +8,7 @@ class MenuItemWidget extends StatelessWidget {
     required this.title,
     required this.route,
     required this.icon,
-    this.bgColors = const [Colors.lightBlueAccent, Colors.blueAccent], 
+    this.bgColors = const [Color(0xFF5EDFFF), Color(0xFF0979AE)], 
     required MenuItem item,
   });
   final String title, route;
