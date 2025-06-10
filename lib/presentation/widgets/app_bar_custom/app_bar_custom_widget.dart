@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:permisos_app/presentation/widgets/widget.dart';
 
 class AppBarCustomWidget extends PreferredSize {
-  const AppBarCustomWidget({
+  AppBarCustomWidget({
     super.key,
     super.preferredSize = const Size.fromHeight(50),
     this.showSettings = true,
-    required super.child,
-  });
+    this.bgColors = const [Colors.lightBlueAccent, Colors.blueAccent],
+    required this.title,
+  }) : super(
+            child: AppBar(
+          title: TitleAppBarWidget(bgColors: bgColors, title: title),
+          centerTitle: true,
+          actions: [
+            Visibility(
+              visible: showSettings,
+              child: IconSettingsWidget(bgColors: bgColors),
+            ),
+          ],
+        ));
+  final String title;
   final bool showSettings;
+  final List<Color> bgColors;
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: child,
-      centerTitle: true,
-      actions: [
-        Visibility(
-          visible: showSettings,
-          child: IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              context.push('/permisos');
-            },
-          ),
-        ),
-      ],
-    );
+    return super.child;
   }
 }
+

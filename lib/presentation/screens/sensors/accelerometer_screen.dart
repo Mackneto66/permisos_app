@@ -7,7 +7,7 @@ class AcelerometerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCustomWidget(child: const Text('Acelerómetro')),
+      appBar: AppBarCustomWidget(title: 'Acelerómetro'),
       body:Center(child: Text('Acelerómetro')),
     );
   }

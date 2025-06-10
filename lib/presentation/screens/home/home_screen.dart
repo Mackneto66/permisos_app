@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         body: CustomScrollView(
           slivers: [
-            SliverAppBarCustomWidget(title: Text('Home')), 
+            SliverAppBarCustomWidget(title: 'Home'), 
             SliverPadding(
               padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16),
               sliver: const MainMenuWidget(),

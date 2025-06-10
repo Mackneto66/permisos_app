@@ -7,7 +7,7 @@ class MagnetometerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCustomWidget(child: const Text('Magnetómetro')),
+      appBar: AppBarCustomWidget(title: 'Magnetómetro'),
       body: Center(child: Text('Magnetómetro')),
     );
   }

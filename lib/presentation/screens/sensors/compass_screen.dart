@@ -7,7 +7,7 @@ class CompassScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCustomWidget(child: const Text('Brújula')),
+      appBar: AppBarCustomWidget(title: 'Brújula'),
       body: Center(child: Text('Brújula')),
     );
   }

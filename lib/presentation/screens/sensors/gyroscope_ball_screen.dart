@@ -7,7 +7,7 @@ class GyroscopeBallScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBarCustomWidget(child: const Text('Giróscopio ball')),
+      appBar: AppBarCustomWidget(title: 'Giróscopio ball'),
       body: Center(child: Text('Giróscopio ball')),
     );
   }

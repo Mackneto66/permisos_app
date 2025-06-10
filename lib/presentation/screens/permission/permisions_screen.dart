@@ -10,7 +10,7 @@ class PermisionsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBarCustomWidget(
         showSettings: false,
-        child: const Text('Permisos'),),
+        title: 'Permisos',),
       body: const PermissionsView(),
     );
   }
