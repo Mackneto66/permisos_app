@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:permisos_app/core/models/menu_item.dart';
+import 'package:permisos_app/domain/domain.dart';
+
 
 class MenuItemWidget extends StatelessWidget {
   const MenuItemWidget({

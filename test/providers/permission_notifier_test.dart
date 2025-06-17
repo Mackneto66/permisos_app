@@ -3,6 +3,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:permisos_app/presentation/screens/providers/provider.dart';
 
 void main() {
+  /* Test widgets de flutter debe ser inicializados */
   TestWidgetsFlutterBinding.ensureInitialized();
   bool mockOpenAppSettingsCalled = false;
   void fakeOpenAppSettings() {

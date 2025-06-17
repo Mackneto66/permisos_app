@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:permisos_app/core/models/menu_item.dart';
+import 'package:permisos_app/domain/domain.dart';
+
 
 final List<MenuItem> menuItems = <MenuItem>[
   MenuItem(title: 'Giróscopio', icon: Icons.downloading, route: '/gyroscope'),

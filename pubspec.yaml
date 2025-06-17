@@ -12,6 +12,7 @@ dependencies:
   flutter_riverpod: ^2.6.1
   go_router: ^15.0.0
   permission_handler: ^12.0.0+1
+  sensors_plus: ^6.1.1
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -30,4 +31,3 @@ flutter:
           weight: 700
         - asset: assets/fonts/RobotoMono-Italic.ttf
           style: italic
-    
