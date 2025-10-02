@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permisos_app/domain/domain.dart';
 import 'package:permisos_app/presentation/screens/providers/provider.dart';
 
-AutoDisposeStreamProvider<T> sensorStreamProvider<T extends ISensorData, S>({
+StreamProvider<T> sensorStreamProvider<T extends ISensorData, S>({
   required Stream<S> Function() sensorStreamFunction,
   required T Function(double x, double y, double z) customSensorData,
   required String sensorName,
@@ -23,7 +23,6 @@ AutoDisposeStreamProvider<T> sensorStreamProvider<T extends ISensorData, S>({
       final y = double.tryParse(typedEvent.y.toStringAsFixed(2)) ?? 0.0;
       final z = double.tryParse(typedEvent.z.toStringAsFixed(2)) ?? 0.0;
       yield customSensorData(x, y, z);
-      
     }
   });
 }

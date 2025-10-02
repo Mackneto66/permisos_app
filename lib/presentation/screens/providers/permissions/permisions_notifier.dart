@@ -1,16 +1,15 @@
-
-
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/legacy.dart';
 import 'package:permisos_app/core/core.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'package:permisos_app/presentation/screens/providers/provider.dart';
 
 class PermissionsNotifier extends StateNotifier<PermissionState> {
-
   final void Function() _openAppSettingsFunction;
 
-  PermissionsNotifier({void Function()? openAppSettingsFn}) :  _openAppSettingsFunction = openAppSettingsFn ?? openAppSettings, super(PermissionState()) {
+  PermissionsNotifier({void Function()? openAppSettingsFn})
+      : _openAppSettingsFunction = openAppSettingsFn ?? openAppSettings,
+        super(PermissionState()) {
     checkPermissions();
   }
 
@@ -33,55 +32,56 @@ class PermissionsNotifier extends StateNotifier<PermissionState> {
     );
   }
 
-  requestCameraAccess() async {
+  Future<void> requestCameraAccess() async {
     final status = await Permission.camera.request();
     state = state.copyWith(camera: status);
     checkPermanentlyDenied(status);
   }
 
-  requestPhotosAccess() async {
+  Future<void> requestPhotosAccess() async {
     final status = await Permission.photos.request();
     state = state.copyWith(photoLibrary: status);
     checkPermanentlyDenied(status);
   }
 
-  requestSensorsAccess() async {
+  Future<void> requestSensorsAccess() async {
     final status = await Permission.sensors.request();
     state = state.copyWith(sensors: status);
     checkPermanentlyDenied(status);
   }
 
-  requestLocationAccess() async {
+  Future<void> requestLocationAccess() async {
     final status = await Permission.location.request();
     state = state.copyWith(location: status);
     checkPermanentlyDenied(status);
   }
 
-  requestLocationAlwaysAccess() async {
+  Future<void> requestLocationAlwaysAccess() async {
     final status = await Permission.locationAlways.request();
     state = state.copyWith(locationAlways: status);
     checkPermanentlyDenied(status);
   }
 
-  requestLocationWhenInUseAccess() async {
+  Future<void> requestLocationWhenInUseAccess() async {
     final status = await Permission.locationWhenInUse.request();
     state = state.copyWith(locationWhenInUse: status);
     checkPermanentlyDenied(status);
   }
 
-  checkPermanentlyDenied(PermissionStatus status) {
+  void checkPermanentlyDenied(PermissionStatus status) {
     if (status == PermissionStatus.permanentlyDenied) {
-      if(state.dialogEvent != DialogEvent.showPermanentlyDeniedDialog){
-        state = state.copyWith(dialogEvent: DialogEvent.showPermanentlyDeniedDialog);
+      if (state.dialogEvent != DialogEvent.showPermanentlyDeniedDialog) {
+        state = state.copyWith(
+            dialogEvent: DialogEvent.showPermanentlyDeniedDialog);
       }
     }
   }
 
-  dialogShow() {
+  void dialogShow() {
     state = state.copyWith(dialogEvent: DialogEvent.none);
   }
 
-  openAppSettingsFromUI() {
+  void openAppSettingsFromUI() {
     _openAppSettingsFunction();
   }
 }
