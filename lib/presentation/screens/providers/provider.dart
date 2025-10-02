@@ -9,5 +9,5 @@ export './permissions/permissions_provider.dart';
 // SENSORS
 export './sensors/gyroscope_provider.dart';
 export './sensors/accelerometer_provider.dart';
+export './sensors/magnetometer_provider.dart';
 export './sensors/sensor_provider.dart';
-

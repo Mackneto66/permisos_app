@@ -8,3 +8,7 @@ extension GyroscopeEventPosition on GyroscopeEvent {
 extension AccelerometerEventPosition on AccelerometerEvent {
   SensorData toSensorData() => (x: x, y: y, z: z);
 }
+
+extension MagnetometerEventPosition on MagnetometerEvent {
+  SensorData toSensorData() => (x: x, y: y, z: z);
+}
