@@ -12,7 +12,7 @@ class MovingBallWidget extends StatelessWidget {
     return Stack(alignment: Alignment.center, children: [
       AnimatedAlign(
         alignment: Alignment(y.clamp(-1.0, 1.0), x.clamp(-1.0, 1.0)),
-        duration: Durations.medium2,
+        duration: Durations.long1,
         curve: Easing.legacyAccelerate,
         child: BallWidget(),
       ),
