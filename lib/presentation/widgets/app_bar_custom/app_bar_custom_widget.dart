@@ -28,4 +28,3 @@ class AppBarCustomWidget extends PreferredSize {
     return super.child;
   }
 }
-
